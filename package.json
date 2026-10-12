@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server": "node server.mjs",
+    "server": "y-websocket",
     "build": "tsc && vite build"
   },
   "dependencies": {

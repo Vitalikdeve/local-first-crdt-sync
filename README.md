@@ -20,26 +20,10 @@ Local-first collaborative task application with offline persistence and CRDT syn
 
 ## Quick Start
 
-### 1. Install dependencies
-
 ```bash
 npm install
-```
-
-### 2. Start the sync server
-
-```bash
-npm run server
-```
-
-The WebSocket sync server will start at `ws://localhost:1234`.
-
-### 3. Start the client application
-
-In a separate terminal:
-
-```bash
-npm run dev
+npm run server # Terminal 1
+npm run dev    # Terminal 2
 ```
 
 Open `http://localhost:5173` in multiple browser tabs or windows to test real-time synchronization and offline functionality.

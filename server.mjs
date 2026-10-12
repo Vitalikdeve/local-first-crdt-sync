@@ -1,6 +1,6 @@
 import { createServer } from 'http';
 import { WebSocketServer } from 'ws';
-import { setupWSConnection } from 'y-websocket/bin/utils';
+import * as utils from 'y-websocket/bin/utils';
 
 const server = createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -10,7 +10,7 @@ const server = createServer((req, res) => {
 const wss = new WebSocketServer({ server });
 
 wss.on('connection', (ws, req) => {
-  setupWSConnection(ws, req);
+  utils.setupWSConnection(ws, req);
 });
 
 const PORT = 1234;
