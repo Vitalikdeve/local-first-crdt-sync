@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local-First CRDT Demo</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Local-First CRDT State</h1>
+        <div class="status-container">
+          <span id="sync-status" class="status-badge connecting">Connecting...</span>
+          <span id="peers-status" class="status-badge peers">Peers: 1</span>
+        </div>
+      </header>
+
+      <section class="info-card">
+        <p><strong>Storage:</strong> IndexedDB (Local-First, zero server latency)</p>
+        <p><strong>Sync:</strong> Bidirectional CRDT replication via WebSockets</p>
+      </section>
+
+      <main class="content">
+        <form id="task-form" class="task-form">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Type a new task and press Enter..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="add-btn">Add Task</button>
+        </form>
+
+        <ul id="task-list" class="task-list"></ul>
+      </main>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
